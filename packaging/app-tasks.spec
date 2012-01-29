@@ -14,7 +14,7 @@ Requires: app-base-core
 Requires: cronie >= 1.4.4
 
 %description
-Task scheduler description
+The Task Scheduler can be used to run batch jobs on your system at regular time intervals.
 
 This package provides the core API and libraries.
 
