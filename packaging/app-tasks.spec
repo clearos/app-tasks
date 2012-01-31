@@ -1,25 +1,28 @@
 
-Name: app-tasks-core
-Group: ClearOS/Libraries
+Name: app-tasks
 Epoch: 1
-Version: 1.0.1
+Version: 1.0.2
 Release: 1%{dist}
 Summary: Task Scheduler - APIs and install
 License: LGPLv3
-Packager: ClearFoundation
-Vendor: ClearFoundation
+Group: ClearOS/Libraries
 Source: app-tasks-%{version}.tar.gz
 Buildarch: noarch
+%description
+The Task Scheduler can be used to run batch jobs on your system at regular time intervals.
+
+%package core
+Summary: Task Scheduler - APIs and install
 Requires: app-base-core
 Requires: cronie >= 1.4.4
 
-%description
+%description core
 The Task Scheduler can be used to run batch jobs on your system at regular time intervals.
 
 This package provides the core API and libraries.
 
 %prep
-%setup -q -n app-tasks-%{version}
+%setup -q
 %build
 
 %install
@@ -28,7 +31,7 @@ cp -r * %{buildroot}/usr/clearos/apps/tasks/
 
 install -D -m 0644 packaging/crond.php %{buildroot}/var/clearos/base/daemon/crond.php
 
-%post
+%post core
 logger -p local6.notice -t installer 'app-tasks-core - installing'
 
 if [ $1 -eq 1 ]; then
@@ -39,7 +42,7 @@ fi
 
 exit 0
 
-%preun
+%preun core
 if [ $1 -eq 0 ]; then
     logger -p local6.notice -t installer 'app-tasks-core - uninstalling'
     [ -x /usr/clearos/apps/tasks/deploy/uninstall ] && /usr/clearos/apps/tasks/deploy/uninstall
@@ -47,7 +50,7 @@ fi
 
 exit 0
 
-%files
+%files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/tasks/packaging
 %exclude /usr/clearos/apps/tasks/tests
