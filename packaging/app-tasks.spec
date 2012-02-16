@@ -1,13 +1,14 @@
 
 Name: app-tasks
 Epoch: 1
-Version: 1.0.2
+Version: 1.0.4
 Release: 1%{dist}
 Summary: Task Scheduler - APIs and install
 License: LGPLv3
 Group: ClearOS/Libraries
 Source: app-tasks-%{version}.tar.gz
 Buildarch: noarch
+
 %description
 The Task Scheduler can be used to run batch jobs on your system at regular time intervals.
 
