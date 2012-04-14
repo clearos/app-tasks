@@ -1,9 +1,9 @@
 
 Name: app-tasks
 Epoch: 1
-Version: 1.0.10
+Version: 1.1.0
 Release: 1%{dist}
-Summary: Task Scheduler - APIs and install
+Summary: Task Scheduler - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Source: app-tasks-%{version}.tar.gz
@@ -13,7 +13,7 @@ Buildarch: noarch
 The Task Scheduler can be used to run batch jobs on your system at regular time intervals.
 
 %package core
-Summary: Task Scheduler - APIs and install
+Summary: Task Scheduler - Core
 Requires: app-base-core
 Requires: cronie >= 1.4.4
 
