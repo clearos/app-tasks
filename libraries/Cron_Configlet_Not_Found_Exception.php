@@ -3,9 +3,9 @@
 /**
  * Cron configlet not found class.
  *
- * @category   ClearOS
- * @package    Tasks
- * @subpackage Exceptions
+ * @category   apps
+ * @package    tasks
+ * @subpackage libraries
  * @author     ClearFoundation <developer@clearfoundation.com>
  * @copyright  2003-2011 ClearFoundation
  * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
@@ -63,9 +63,9 @@ clearos_load_library('base/Engine_Exception');
 /**
  * Cron configlet not found class.
  *
- * @category   Apps
- * @package    Tasks
- * @subpackage Exceptions
+ * @category   apps
+ * @package    tasks
+ * @subpackage libraries
  * @author     ClearFoundation <developer@clearfoundation.com>
  * @copyright  2003-2011 ClearFoundation
  * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
