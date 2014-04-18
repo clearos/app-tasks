@@ -54,7 +54,6 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/tasks/packaging
-%exclude /usr/clearos/apps/tasks/tests
 %dir /usr/clearos/apps/tasks
 /usr/clearos/apps/tasks/deploy
 /usr/clearos/apps/tasks/language
