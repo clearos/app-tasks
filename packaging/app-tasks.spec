@@ -1,7 +1,7 @@
 
 Name: app-tasks
 Epoch: 1
-Version: 2.1.6
+Version: 2.3.20
 Release: 1%{dist}
 Summary: Task Scheduler - Core
 License: LGPLv3
@@ -54,6 +54,7 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/tasks/packaging
+%exclude /usr/clearos/apps/tasks/unify.json
 %dir /usr/clearos/apps/tasks
 /usr/clearos/apps/tasks/deploy
 /usr/clearos/apps/tasks/language
