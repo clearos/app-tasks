@@ -1,5 +1,5 @@
 <?php
 
-$lang['tasks_app_description'] = 'The Task Scheduler can be used to run batch jobs on your system at regular time intervals.';
-$lang['tasks_app_name'] = 'Task Scheduler';
-$lang['tasks_schedule_configuration_already_exists'] = 'Schedule configuration already exists.';
+$lang['tasks_app_description'] = 'பணி திட்டமிடுதல் வழக்கமான கால இடைவெளியில் உங்கள் கணினியில் தொகுதி வேலைகள் இயக்க பயன்படுத்த முடியும்.';
+$lang['tasks_app_name'] = 'பணி திட்டமிடுதல்';
+$lang['tasks_schedule_configuration_already_exists'] = 'அட்டவணை கட்டமைப்பு ஏற்கனவே உள்ளது.';
