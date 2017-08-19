@@ -1,7 +1,7 @@
 
 Name: app-tasks
 Epoch: 1
-Version: 2.3.22
+Version: 2.4.0
 Release: 1%{dist}
 Summary: Task Scheduler - Core
 License: LGPLv3

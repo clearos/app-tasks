@@ -243,6 +243,33 @@ class Cron extends Daemon
             return FALSE;
     }
 
+    /**
+     * Replaces a configlet to cron.d.
+     *
+     * @param string $name    configlet name
+     * @param string $payload valid crond payload
+     *
+     * @return void
+     * @throws Engine_Exception, Validation_Exception
+     */
+
+    public function replace_configlet($name, $payload)
+    {
+        clearos_profile(__METHOD__, __LINE__);
+
+        // TODO -- validate payload
+        $file = new File(self::PATH_CROND . '/' . $name . '.tmp', TRUE);
+
+        if ($file->exists())
+            $file->delete();
+
+        $file->create('root', 'root', '0644');
+
+        $file->add_lines("$payload\n");
+
+        $file->move_to(self::PATH_CROND . '/' . $name);
+    }
+
     ///////////////////////////////////////////////////////////////////////////////
     // V A L I D A T I O N  M E T H O D S
     ///////////////////////////////////////////////////////////////////////////////
